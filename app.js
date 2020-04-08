@@ -51,10 +51,6 @@ app.get("/", function(req, res) {
   });
 });
 
-app.get("/country/:" + countryName1, function(req, res){
-res.render("country");
-})
-
 let name = "";
 
 // Creating a post request, so we take the country name
@@ -91,7 +87,7 @@ app.post("/", function(req, res) {
       searchData2 = deaths;
       searchData3 = recovered;
       countryName1 = countryName;
-      res.redirect("/country/" + countryName1);
+      res.redirect("/");
     })
   })
 })
